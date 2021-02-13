@@ -10,11 +10,11 @@
 #include <condition_variable>
 #include <mutex>
 #include <memory>
-#include "webrtc/api/datachannelinterface.h"
-#include "webrtc/api/peerconnectioninterface.h"
-#include "webrtc/base/scoped_ref_ptr.h"
-#include "webrtc/api/jsep.h"
-#include "webrtc/base/json.h"
+#include "api/data_channel_interface.h"
+#include "api/peer_connection_interface.h"
+#include "base/scoped_ref_ptr.h"
+#include "api/jsep.h"
+#include "base/json.h"
 #include "common.h"
 
 namespace peerapi {
