@@ -73,6 +73,7 @@ set(WEBRTC_INCLUDE_DIR ${WEBRTC_ROOT_DIR})
 list(APPEND WEBRTC_INCLUDE_DIR
   "${WEBRTC_ROOT_DIR}"
   "${WEBRTC_ROOT_DIR}/api"
+  "${WEBRTC_ROOT_DIR}/third_party/abseil-cpp"
   "${WEBRTC_ROOT_DIR}/third_party/libyuv/include"
   "${WEBRTC_ROOT_DIR}/third_party/jsoncpp/overrides/include"
   "${WEBRTC_ROOT_DIR}/third_party/jsoncpp/source/include"
