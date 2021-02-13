@@ -63,24 +63,24 @@ set( WEBRTC_LIBRARY_DIR_DEBUG ${WEBRTC_ROOT_DIR}/${WEBRTC_OUT_DIR_DEBUG})
 # Find WebRTC header directory
 # ============================================================================
 
-# find_path(WEBRTC_INCLUDE_DIR
-#   NAMES
-#   	webrtc/config.h
-#   PATHS
-#   	${WEBRTC_ROOT_DIR}
-#   )
-set(WEBRTC_INCLUDE_DIR ${WEBRTC_ROOT_DIR})
+find_path(WEBRTC_INCLUDE_DIR
+  NAMES
+  	webrtc/config.h
+  PATHS
+  	${WEBRTC_ROOT_DIR}
+  )
+# set(WEBRTC_INCLUDE_DIR ${WEBRTC_ROOT_DIR})
 list(APPEND WEBRTC_INCLUDE_DIR
-  "${WEBRTC_ROOT_DIR}"
-  "${WEBRTC_ROOT_DIR}/api"
-  "${WEBRTC_ROOT_DIR}/third_party/abseil-cpp"
-  "${WEBRTC_ROOT_DIR}/third_party/libyuv/include"
-  "${WEBRTC_ROOT_DIR}/third_party/jsoncpp/overrides/include"
-  "${WEBRTC_ROOT_DIR}/third_party/jsoncpp/source/include"
-  "${WEBRTC_ROOT_DIR}/third_party/boringssl/src/include"
+  "${WEBRTC_INCLUDE_DIR}"
+  "${WEBRTC_INCLUDE_DIR}/webrtc"
+  "${WEBRTC_INCLUDE_DIR}/webrtc/third_party/libyuv/include"
+  "${WEBRTC_INCLUDE_DIR}/third_party/jsoncpp/overrides/include"
+  "${WEBRTC_INCLUDE_DIR}/third_party/jsoncpp/source/include"
+  "${WEBRTC_INCLUDE_DIR}/third_party/boringssl/src/include"
   )
   message(STATUS "WEBRTC_INCLUDE_DIR: ${WEBRTC_INCLUDE_DIR}")
-
+# "${WEBRTC_ROOT_DIR}/third_party/abseil-cpp"
+#"${WEBRTC_ROOT_DIR}/api"
 # ============================================================================
 # Find WebRTC libries
 #   webrtc -> webrtc.lib or libwebrtc.a
