@@ -71,12 +71,12 @@ find_path(WEBRTC_INCLUDE_DIR
   )
 
 list(APPEND WEBRTC_INCLUDE_DIR
-  "${WEBRTC_INCLUDE_DIR}"
-  "${WEBRTC_INCLUDE_DIR}/webrtc"
-  "${WEBRTC_INCLUDE_DIR}/webrtc/third_party/libyuv/include"
-  "${WEBRTC_INCLUDE_DIR}/third_party/jsoncpp/overrides/include"
-  "${WEBRTC_INCLUDE_DIR}/third_party/jsoncpp/source/include"
-  "${WEBRTC_INCLUDE_DIR}/third_party/boringssl/src/include"
+  "${WEBRTC_ROOT_DIR}"
+  "${WEBRTC_ROOT_DIR}/api"
+  "${WEBRTC_ROOT_DIR}/third_party/libyuv/include"
+  "${WEBRTC_ROOT_DIR}/third_party/jsoncpp/overrides/include"
+  "${WEBRTC_ROOT_DIR}/third_party/jsoncpp/source/include"
+  "${WEBRTC_ROOT_DIR}/third_party/boringssl/src/include"
   )
 
 # ============================================================================
