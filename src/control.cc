@@ -9,7 +9,7 @@
 
 #include "rtc_base/location.h"
 #include "rtc_base/strings/json.h"
-// #include "rtc_base/signalthread.h"
+#include "rtc_base/thread.h"
 
 #include "logging.h"
 
@@ -61,7 +61,7 @@ bool Control::InitializeControl() {
 
   RTC_DCHECK(peer_connection_factory_.get() == NULL);
 
-  webrtc::MediaConstraintsInterface* constraints = NULL;
+  webrtc::MediaConstraints* constraints = NULL;
 
   if ( !CreatePeerFactory(constraints) ) {
     LOG_F(LERROR) << "CreatePeerFactory failed";
@@ -439,7 +439,7 @@ void Control::LeaveChannel(const string name) {
 //
 
 bool Control::CreatePeerFactory(
-  const webrtc::MediaConstraintsInterface* constraints) {
+  const webrtc::MediaConstraints* constraints) {
 
   fake_audio_capture_module_ = FakeAudioCaptureModule::Create();
   if (fake_audio_capture_module_ == NULL) {
