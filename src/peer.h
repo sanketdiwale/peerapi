@@ -82,8 +82,8 @@ public:
   // PeerConnection
   //
 
-  void CreateOffer(const webrtc::MediaConstraintsInterface* constraints);
-  void CreateAnswer(const webrtc::MediaConstraintsInterface* constraints);
+  void CreateOffer(const webrtc::MediaConstraints* constraints);
+  void CreateAnswer(const webrtc::MediaConstraints* constraints);
   void AddIceCandidate(const string& sdp_mid, int sdp_mline_index,
                        const string& candidate);
   void ReceiveOfferSdp(const string& sdp);
