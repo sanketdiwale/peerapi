@@ -450,7 +450,7 @@ bool Control::CreatePeerFactory(
 
   peer_connection_factory_ = webrtc::CreatePeerConnectionFactory(
     rtc::Thread::Current(), rtc::Thread::Current(), rtc::Thread::Current(),
-    fake_audio_capture_module_, nullptr, nullptr, NULL, NULL);
+    fake_audio_capture_module_, nullptr, nullptr, nullptr, nullptr NULL, NULL);
 
   if (!peer_connection_factory_.get()) {
     LOG_F( LERROR ) << "Failed to create CreatePeerConnectionFactory";
