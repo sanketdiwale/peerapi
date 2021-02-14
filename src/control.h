@@ -12,6 +12,7 @@
 #include "peer.h"
 #include "signalconnection.h"
 #include "controlobserver.h"
+#include "sdk/media_constraints.h"
 
 #include "rtc_base/third_party/sigslot/sigslot.h"
 #include "fakeaudiocapturemodule.h"
@@ -78,7 +79,7 @@ protected:
   void CreateChannel(const string name);
   void JoinChannel(const string name);
   void LeaveChannel(const string name);
-  bool CreatePeerFactory(const webrtc::MediaConstraintsInterface* constraints);
+  bool CreatePeerFactory(const webrtc::MediaConstraints* constraints);
   void CreateOffer(const Json::Value& data);
   void AddIceCandidate(const string& peer_id, const Json::Value& data);
   void ReceiveOfferSdp(const string& peer_id, const Json::Value& data);
