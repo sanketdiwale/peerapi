@@ -56,12 +56,12 @@ class FakeAudioCaptureModule
   // Only functions called by PeerConnection are implemented, the rest do
   // nothing and return success. If a function is not expected to be called by
   // PeerConnection an assertion is triggered if it is in fact called.
-  int64_t TimeUntilNextProcess() override;
-  void Process() override;
+  // int64_t TimeUntilNextProcess() override;
+  // void Process() override;
 
   int32_t ActiveAudioLayer(AudioLayer* audio_layer) const override;
 
-  ErrorCode LastError() const override;
+  webrtc::ErrorCode LastError() const override;
   int32_t RegisterEventObserver(
       webrtc::AudioDeviceObserver* event_callback) override;
 
