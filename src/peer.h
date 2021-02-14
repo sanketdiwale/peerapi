@@ -12,7 +12,7 @@
 #include <memory>
 #include "api/data_channel_interface.h"
 #include "api/peer_connection_interface.h"
-#include "base/memory/scoped_refptr.h"
+#include "api/scoped_refptr.h"
 #include "api/jsep.h"
 #include "rtc_base/strings/json.h"
 #include "sdk/media_constraints.h"
