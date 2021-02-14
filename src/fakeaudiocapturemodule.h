@@ -61,7 +61,7 @@ class FakeAudioCaptureModule
 
   int32_t ActiveAudioLayer(AudioLayer* audio_layer) const override;
 
-  ErrorCode LastError() const override;
+  // ErrorCode LastError() const override;
   // int32_t RegisterEventObserver(
   //     webrtc::AudioDeviceObserver* event_callback) override;
 
@@ -119,7 +119,7 @@ class FakeAudioCaptureModule
   int32_t SpeakerVolume(uint32_t* volume) const override;
   int32_t MaxSpeakerVolume(uint32_t* max_volume) const override;
   int32_t MinSpeakerVolume(uint32_t* min_volume) const override;
-  int32_t SpeakerVolumeStepSize(uint16_t* step_size) const override;
+  // int32_t SpeakerVolumeStepSize(uint16_t* step_size) const override;
 
   int32_t MicrophoneVolumeIsAvailable(bool* available) override;
   int32_t SetMicrophoneVolume(uint32_t volume) override;
@@ -127,7 +127,7 @@ class FakeAudioCaptureModule
   int32_t MaxMicrophoneVolume(uint32_t* max_volume) const override;
 
   int32_t MinMicrophoneVolume(uint32_t* min_volume) const override;
-  int32_t MicrophoneVolumeStepSize(uint16_t* step_size) const override;
+  // int32_t MicrophoneVolumeStepSize(uint16_t* step_size) const override;
 
   int32_t SpeakerMuteIsAvailable(bool* available) override;
   int32_t SetSpeakerMute(bool enable) override;
@@ -137,9 +137,9 @@ class FakeAudioCaptureModule
   int32_t SetMicrophoneMute(bool enable) override;
   int32_t MicrophoneMute(bool* enabled) const override;
 
-  int32_t MicrophoneBoostIsAvailable(bool* available) override;
-  int32_t SetMicrophoneBoost(bool enable) override;
-  int32_t MicrophoneBoost(bool* enabled) const override;
+  // int32_t MicrophoneBoostIsAvailable(bool* available) override;
+  // int32_t SetMicrophoneBoost(bool enable) override;
+  // int32_t MicrophoneBoost(bool* enabled) const override;
 
   int32_t StereoPlayoutIsAvailable(bool* available) const override;
   int32_t SetStereoPlayout(bool enable) override;
@@ -147,32 +147,32 @@ class FakeAudioCaptureModule
   int32_t StereoRecordingIsAvailable(bool* available) const override;
   int32_t SetStereoRecording(bool enable) override;
   int32_t StereoRecording(bool* enabled) const override;
-  int32_t SetRecordingChannel(const ChannelType channel) override;
-  int32_t RecordingChannel(ChannelType* channel) const override;
+  // int32_t SetRecordingChannel(const ChannelType channel) override;
+  // int32_t RecordingChannel(ChannelType* channel) const override;
 
-  int32_t SetPlayoutBuffer(const BufferType type,
-                           uint16_t size_ms = 0) override;
-  int32_t PlayoutBuffer(BufferType* type, uint16_t* size_ms) const override;
+  // int32_t SetPlayoutBuffer(const BufferType type,
+  //                          uint16_t size_ms = 0) override;
+  // int32_t PlayoutBuffer(BufferType* type, uint16_t* size_ms) const override;
   int32_t PlayoutDelay(uint16_t* delay_ms) const override;
-  int32_t RecordingDelay(uint16_t* delay_ms) const override;
+  // int32_t RecordingDelay(uint16_t* delay_ms) const override;
 
-  int32_t CPULoad(uint16_t* load) const override;
+  // int32_t CPULoad(uint16_t* load) const override;
 
-  int32_t StartRawOutputFileRecording(
-      const char pcm_file_name_utf8[webrtc::kAdmMaxFileNameSize]) override;
-  int32_t StopRawOutputFileRecording() override;
-  int32_t StartRawInputFileRecording(
-      const char pcm_file_name_utf8[webrtc::kAdmMaxFileNameSize]) override;
-  int32_t StopRawInputFileRecording() override;
+  // int32_t StartRawOutputFileRecording(
+  //     const char pcm_file_name_utf8[webrtc::kAdmMaxFileNameSize]) override;
+  // int32_t StopRawOutputFileRecording() override;
+  // int32_t StartRawInputFileRecording(
+  //     const char pcm_file_name_utf8[webrtc::kAdmMaxFileNameSize]) override;
+  // int32_t StopRawInputFileRecording() override;
 
-  int32_t SetRecordingSampleRate(const uint32_t samples_per_sec) override;
-  int32_t RecordingSampleRate(uint32_t* samples_per_sec) const override;
-  int32_t SetPlayoutSampleRate(const uint32_t samples_per_sec) override;
-  int32_t PlayoutSampleRate(uint32_t* samples_per_sec) const override;
+  // int32_t SetRecordingSampleRate(const uint32_t samples_per_sec) override;
+  // int32_t RecordingSampleRate(uint32_t* samples_per_sec) const override;
+  // int32_t SetPlayoutSampleRate(const uint32_t samples_per_sec) override;
+  // int32_t PlayoutSampleRate(uint32_t* samples_per_sec) const override;
 
-  int32_t ResetAudioDevice() override;
-  int32_t SetLoudspeakerStatus(bool enable) override;
-  int32_t GetLoudspeakerStatus(bool* enabled) const override;
+  // int32_t ResetAudioDevice() override;
+  // int32_t SetLoudspeakerStatus(bool enable) override;
+  // int32_t GetLoudspeakerStatus(bool* enabled) const override;
   bool BuiltInAECIsAvailable() const override { return false; }
   int32_t EnableBuiltInAEC(bool enable) override { return -1; }
   bool BuiltInAGCIsAvailable() const override { return false; }
