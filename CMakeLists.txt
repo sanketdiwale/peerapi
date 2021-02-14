@@ -141,21 +141,22 @@ if (PEERAPI_WITH_STATIC)
     )
   elseif (APPLE)
     string(TOUPPER "${CMAKE_BUILD_TYPE}" _CMAKE_BUILD_TYPE)
-    if (_CMAKE_BUILD_TYPE STREQUAL "DEBUG")
-      add_custom_command(TARGET peerapi PRE_LINK
-        COMMAND ${CMAKE_COMMAND} -E env \"PATH=${DEPOT_TOOLS_DIR}:$ENV{PATH}\" gn gen ${WEBRTC_OUT_DIR_DEBUG} --args=\"is_debug=true is_component_build=false\"
-        COMMAND ${CMAKE_COMMAND} -E env \"PATH=${DEPOT_TOOLS_DIR}:$ENV{PATH}\" ninja -C ${WEBRTC_OUT_DIR_DEBUG}
-        WORKING_DIRECTORY "${WEBRTC_ROOT_DIR}"
-        COMMENT "Building WebRTC library (Once)"
-        )
-    else()
-      add_custom_command(TARGET peerapi PRE_LINK
-        COMMAND ${CMAKE_COMMAND} -E env \"PATH=${DEPOT_TOOLS_DIR}:$ENV{PATH}\" gn gen ${WEBRTC_OUT_DIR} --args=\"is_debug=false is_component_build=false\"
-        COMMAND ${CMAKE_COMMAND} -E env \"PATH=${DEPOT_TOOLS_DIR}:$ENV{PATH}\" ninja -C ${WEBRTC_OUT_DIR}
-        WORKING_DIRECTORY "${WEBRTC_ROOT_DIR}"
-        COMMENT "Building WebRTC library (Once)"
-        )
-    endif()
+    # skip this build using an external build of webrtc for now
+    # if (_CMAKE_BUILD_TYPE STREQUAL "DEBUG")
+    #   add_custom_command(TARGET peerapi PRE_LINK
+    #     COMMAND ${CMAKE_COMMAND} -E env \"PATH=${DEPOT_TOOLS_DIR}:$ENV{PATH}\" gn gen ${WEBRTC_OUT_DIR_DEBUG} --args=\"is_debug=true is_component_build=false\"
+    #     COMMAND ${CMAKE_COMMAND} -E env \"PATH=${DEPOT_TOOLS_DIR}:$ENV{PATH}\" ninja -C ${WEBRTC_OUT_DIR_DEBUG}
+    #     WORKING_DIRECTORY "${WEBRTC_ROOT_DIR}"
+    #     COMMENT "Building WebRTC library (Once)"
+    #     )
+    # else()
+    #   add_custom_command(TARGET peerapi PRE_LINK
+    #     COMMAND ${CMAKE_COMMAND} -E env \"PATH=${DEPOT_TOOLS_DIR}:$ENV{PATH}\" gn gen ${WEBRTC_OUT_DIR} --args=\"is_debug=false is_component_build=false\"
+    #     COMMAND ${CMAKE_COMMAND} -E env \"PATH=${DEPOT_TOOLS_DIR}:$ENV{PATH}\" ninja -C ${WEBRTC_OUT_DIR}
+    #     WORKING_DIRECTORY "${WEBRTC_ROOT_DIR}"
+    #     COMMENT "Building WebRTC library (Once)"
+    #     )
+    # endif()
   elseif(UNIX)
     string(TOUPPER "${CMAKE_BUILD_TYPE}" _CMAKE_BUILD_TYPE)
     if (_CMAKE_BUILD_TYPE STREQUAL "DEBUG")
