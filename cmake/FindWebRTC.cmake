@@ -76,6 +76,7 @@ list(APPEND WEBRTC_INCLUDE_DIR
   "${WEBRTC_INCLUDE_DIR}/third_party/jsoncpp/source/include"
   "${WEBRTC_INCLUDE_DIR}/third_party/boringssl/src/include"
   "${WEBRTC_ROOT_DIR}/third_party/abseil-cpp"
+  "${WEBRTC_INCLUDE_DIR}/third_party/tcmalloc/chromium/src"
   )
   message(STATUS "WEBRTC_INCLUDE_DIR: ${WEBRTC_INCLUDE_DIR}")
 # 

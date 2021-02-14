@@ -109,7 +109,7 @@ public:
   //
 
   void OnSuccess(webrtc::SessionDescriptionInterface* desc) override;
-  void OnFailure(const string& error) override  {}
+  void OnFailure(webrtc::RTCError error) override  {}
 
   //
   // PeerDataChannelObserver
