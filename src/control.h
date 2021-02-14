@@ -13,7 +13,7 @@
 #include "signalconnection.h"
 #include "controlobserver.h"
 
-#include "webrtc/base/sigslot.h"
+#include "rtc_base/third_party/sigslot/sigslot.h"
 #include "fakeaudiocapturemodule.h"
 
 

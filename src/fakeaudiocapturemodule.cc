@@ -10,10 +10,10 @@
 
 #include "webrtc/pc/test/fakeaudiocapturemodule.h"
 
-#include "webrtc/base/checks.h"
-#include "webrtc/base/refcount.h"
-#include "webrtc/base/thread.h"
-#include "webrtc/base/timeutils.h"
+#include "rtc_base/checks.h"
+#include "rtc_base/ref_count.h"
+#include "rtc_base/thread.h"
+#include "rtc_base/time_utils.h"
 
 // Audio sample value that is high enough that it doesn't occur naturally when
 // frames are being faked. E.g. NetEq will not generate this large sample value

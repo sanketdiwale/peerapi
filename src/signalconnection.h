@@ -44,8 +44,8 @@
 #include "websocketpp/client.hpp"
 #include "websocketpp/common/thread.hpp"
 
-#include "webrtc/base/sigslot.h"
-#include "webrtc/base/json.h"
+#include "rtc_base/third_party/sigslot/sigslot.h"
+#include "rtc_base/strings/json.h"
 
 
 namespace peerapi {

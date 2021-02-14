@@ -22,12 +22,12 @@
 
 #include <memory>
 
-#include "webrtc/base/basictypes.h"
-#include "webrtc/base/criticalsection.h"
-#include "webrtc/base/messagehandler.h"
-#include "webrtc/base/scoped_ref_ptr.h"
-#include "webrtc/common_types.h"
-#include "webrtc/modules/audio_device/include/audio_device.h"
+#include "third_party/tcmalloc/chromium/src/base/basictypes.h"
+// #include "webrtc/base/criticalsection.h"
+#include "rtc_base/message_handler.h"
+#include "base/memory/scoped_refptr.h"
+// #include "webrtc/common_types.h"
+#include "modules/audio_device/include/audio_device.h"
 
 namespace rtc {
 class Thread;

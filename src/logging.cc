@@ -45,11 +45,11 @@ static const char kLibjingle[] = "libjingle";
 #include <ostream>
 #include <vector>
 
-#include "webrtc/base/criticalsection.h"
-#include "webrtc/base/platform_thread.h"
-#include "webrtc/base/stringencode.h"
-#include "webrtc/base/stringutils.h"
-#include "webrtc/base/timeutils.h"
+// #include "webrtc/base/criticalsection.h"
+#include "rtc_base/platform_thread.h"
+#include "rtc_base/string_encode.h"
+#include "rtc_base/string_utils.h"
+#include "rtc_base/time_utils.h"
 
 #include "logging.h"
 

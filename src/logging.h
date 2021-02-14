@@ -63,9 +63,9 @@
 #include <CoreServices/CoreServices.h>
 #endif
 
-#include "webrtc/base/basictypes.h"
-#include "webrtc/base/constructormagic.h"
-#include "webrtc/base/thread_annotations.h"
+#include "third_party/tcmalloc/chromium/src/base/basictypes.h"
+#include "rtc_base/constructor_magic.h"
+#include "rtc_base/thread_annotations.h"
 
 namespace peerapi {
 

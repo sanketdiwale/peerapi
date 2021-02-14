@@ -7,15 +7,15 @@
 #include "control.h"
 #include "peer.h"
 
-#include "webrtc/base/location.h"
-#include "webrtc/base/json.h"
-#include "webrtc/base/signalthread.h"
+#include "rtc_base/location.h"
+#include "rtc_base/strings/json.h"
+// #include "rtc_base/signalthread.h"
 
 #include "logging.h"
 
 #ifdef WEBRTC_POSIX
-#include "webrtc/base/messagehandler.h"
-#include "webrtc/base/messagequeue.h"
+#include "rtc_base/message_handler.h"
+#include "rtc_base/thread.h"
 
 namespace rtc {
 

@@ -6,8 +6,8 @@
 
 #include "control.h"
 #include "peer.h"
-#include "webrtc/api/test/fakeconstraints.h"
-#include "webrtc/pc/test/mockpeerconnectionobservers.h"
+// #include "api/test/fakeconstraints.h"
+#include "pc/test/mock_peer_connection_observers.h"
 
 #include "logging.h"
 
