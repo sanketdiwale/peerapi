@@ -349,8 +349,8 @@ bool PeerControl::CreatePeerConnection() {
   RTC_DCHECK(peer_connection_.get() == NULL);
 
   // Enable DTLS
-  webrtc::FakeConstraints constraints;
-  constraints.AddOptional(webrtc::MediaConstraints::kEnableDtlsSrtp, "true");
+  // webrtc::FakeConstraints constraints;
+  // constraints.AddOptional(webrtc::MediaConstraints::kEnableDtlsSrtp, "true");
 
   // CreatePeerConnection with RTCConfiguration.
   webrtc::PeerConnectionInterface::RTCConfiguration config;
@@ -359,7 +359,7 @@ bool PeerControl::CreatePeerConnection() {
   config.servers.push_back(ice_server);
 
   peer_connection_ = peer_connection_factory_->CreatePeerConnection(
-    config, &constraints, NULL, NULL, this);
+    config, NULL, NULL, this);
 
   if ( peer_connection_.get() == nullptr ) {
     LOG_F( LERROR ) << "peer_connection is null";
