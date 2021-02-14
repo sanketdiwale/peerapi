@@ -119,7 +119,7 @@ void PeerControl::Close(const CloseCode code) {
 }
 
 
-void PeerControl::CreateOffer(const webrtc::MediaConstraintsInterface* constraints) {
+void PeerControl::CreateOffer(const webrtc::MediaConstraints* constraints) {
   RTC_DCHECK( state_ == pClosed );
 
   state_ = pConnecting;
@@ -128,7 +128,7 @@ void PeerControl::CreateOffer(const webrtc::MediaConstraintsInterface* constrain
 }
 
 
-void PeerControl::CreateAnswer(const webrtc::MediaConstraintsInterface* constraints) {
+void PeerControl::CreateAnswer(const webrtc::MediaConstraints* constraints) {
   RTC_DCHECK( state_ == pClosed );
 
   state_ = pConnecting;
@@ -350,7 +350,7 @@ bool PeerControl::CreatePeerConnection() {
 
   // Enable DTLS
   webrtc::FakeConstraints constraints;
-  constraints.AddOptional(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp, "true");
+  constraints.AddOptional(webrtc::MediaConstraints::kEnableDtlsSrtp, "true");
 
   // CreatePeerConnection with RTCConfiguration.
   webrtc::PeerConnectionInterface::RTCConfiguration config;
