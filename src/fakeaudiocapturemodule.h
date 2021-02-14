@@ -25,8 +25,8 @@
 #include "third_party/tcmalloc/chromium/src/base/basictypes.h"
 #include "rtc_base/critical_section.h"
 #include "rtc_base/message_handler.h"
-#include "base/memory/scoped_refptr.h"
-// #include "webrtc/common_types.h"
+#include "api/scoped_refptr.h"
+#include "common_types.h"
 #include "modules/audio_device/include/audio_device.h"
 
 namespace rtc {
