@@ -23,7 +23,7 @@
 #include <memory>
 
 #include "third_party/tcmalloc/chromium/src/base/basictypes.h"
-// #include "rtc_base/criticalsection.h"
+#include "rtc_base/critical_section.h"
 #include "rtc_base/message_handler.h"
 #include "base/memory/scoped_refptr.h"
 // #include "webrtc/common_types.h"
@@ -101,13 +101,13 @@ class FakeAudioCaptureModule
   int32_t StopRecording() override;
   bool Recording() const override;
 
-  int32_t SetAGC(bool enable) override;
-  bool AGC() const override;
+  // int32_t SetAGC(bool enable) override;
+  // bool AGC() const override;
 
-  int32_t SetWaveOutVolume(uint16_t volume_left,
-                           uint16_t volume_right) override;
-  int32_t WaveOutVolume(uint16_t* volume_left,
-                        uint16_t* volume_right) const override;
+  // int32_t SetWaveOutVolume(uint16_t volume_left,
+  //                          uint16_t volume_right) override;
+  // int32_t WaveOutVolume(uint16_t* volume_left,
+  //                       uint16_t* volume_right) const override;
 
   int32_t InitSpeaker() override;
   bool SpeakerIsInitialized() const override;
