@@ -23,7 +23,7 @@
 #include <memory>
 
 #include "third_party/tcmalloc/chromium/src/base/basictypes.h"
-// #include "webrtc/base/criticalsection.h"
+// #include "rtc_base/criticalsection.h"
 #include "rtc_base/message_handler.h"
 #include "base/memory/scoped_refptr.h"
 // #include "webrtc/common_types.h"
@@ -61,9 +61,9 @@ class FakeAudioCaptureModule
 
   int32_t ActiveAudioLayer(AudioLayer* audio_layer) const override;
 
-  webrtc::ErrorCode LastError() const override;
-  int32_t RegisterEventObserver(
-      webrtc::AudioDeviceObserver* event_callback) override;
+  ErrorCode LastError() const override;
+  // int32_t RegisterEventObserver(
+  //     webrtc::AudioDeviceObserver* event_callback) override;
 
   // Note: Calling this method from a callback may result in deadlock.
   int32_t RegisterAudioCallback(
