@@ -14,7 +14,8 @@
 
 #include "common.h"
 #include "controlobserver.h"
-
+#include "control.h"
+#include "logging.h"
 #ifndef USE_PEERAPI_STRICT_NAMESPACE
 using namespace peerapi;
 #endif // USE_PEERAPI_STRICT_NAMESPACE

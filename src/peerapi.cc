@@ -8,8 +8,6 @@
 #include <locale>
  
 #include "peerapi.h"
-#include "control.h"
-#include "logging.h"
 
 namespace peerapi {
 
