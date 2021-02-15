@@ -123,7 +123,12 @@ void PeerControl::CreateOffer(const webrtc::MediaConstraints* constraints) {
   RTC_DCHECK( state_ == pClosed );
 
   state_ = pConnecting;
-  peer_connection_->CreateOffer(this, constraints);
+  webrtc::PeerConnectionInterface::RTCOfferAnswerOptions options;
+  if (mandatory_receive_) {
+    options.offer_to_receive_audio = true;
+    options.offer_to_receive_video = true;
+  }
+  peer_connection_->CreateOffer(this, options);
   LOG_F( INFO ) << "Done";
 }
 
