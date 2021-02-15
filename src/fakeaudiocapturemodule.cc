@@ -94,17 +94,17 @@ int32_t FakeAudioCaptureModule::ActiveAudioLayer(
   return 0;
 }
 
-webrtc::AudioDeviceModule::ErrorCode FakeAudioCaptureModule::LastError() const {
-  RTC_NOTREACHED();
-  return webrtc::AudioDeviceModule::kAdmErrNone;
-}
+// webrtc::AudioDeviceModule::ErrorCode FakeAudioCaptureModule::LastError() const {
+//   RTC_NOTREACHED();
+//   return webrtc::AudioDeviceModule::kAdmErrNone;
+// }
 
-int32_t FakeAudioCaptureModule::RegisterEventObserver(
-    webrtc::AudioDeviceObserver* /*event_callback*/) {
-  // Only used to report warnings and errors. This fake implementation won't
-  // generate any so discard this callback.
-  return 0;
-}
+// int32_t FakeAudioCaptureModule::RegisterEventObserver(
+//     webrtc::AudioDeviceObserver* /*event_callback*/) {
+//   // Only used to report warnings and errors. This fake implementation won't
+//   // generate any so discard this callback.
+//   return 0;
+// }
 
 int32_t FakeAudioCaptureModule::RegisterAudioCallback(
     webrtc::AudioTransport* audio_callback) {
