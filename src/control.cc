@@ -5,9 +5,9 @@
 */
 
 #include "control.h"
-#include "peer.h"
+// #include "peer.h"
 
-#include "logging.h"
+// #include "logging.h"
 
 #ifdef WEBRTC_POSIX
 #include "rtc_base/message_handler.h"

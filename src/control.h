@@ -10,6 +10,7 @@
 #include <memory>
 
 #include "peer.h"
+#include "logging.h"
 #include "signalconnection.h"
 #include "controlobserver.h"
 #include "sdk/media_constraints.h"
