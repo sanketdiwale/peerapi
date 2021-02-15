@@ -590,7 +590,7 @@ bool FakeAudioCaptureModule::Initialize() {
   // sent to it. Note that the audio processing pipeline will likely distort the
   // original signal.
   SetSendBuffer(kHighSampleValue);
-  last_process_time_ms_ = rtc::TimeMillis();
+  // last_process_time_ms_ = rtc::TimeMillis();
   return true;
 }
 
@@ -624,7 +624,7 @@ bool FakeAudioCaptureModule::ShouldStartProcessing() {
 void FakeAudioCaptureModule::UpdateProcessing(bool start) {
   if (start) {
     if (!process_thread_) {
-      process_thread_.reset(new rtc::Thread());
+      process_thread_.reset(new rtc::Thread::Create());
       process_thread_->Start();
     }
     process_thread_->Post(RTC_FROM_HERE, this, MSG_START_PROCESS);
