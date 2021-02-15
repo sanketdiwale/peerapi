@@ -125,8 +125,8 @@ set(PEERAPI_INCLUDE_DIRECTORY
 if (PEERAPI_WITH_STATIC)
   add_library(peerapi STATIC ${HEADERS} ${SOURCES})
 
-  target_compile_definitions(peerapi ${_PEERAPI_INTERNAL_DEFINES})
-  target_include_directories(peerapi ${_PEERAPI_INTERNAL_INCLUDE_DIR} )
+  target_compile_definitions(peerapi PUBLIC ${_PEERAPI_INTERNAL_DEFINES})
+  target_include_directories(peerapi PUBLIC ${_PEERAPI_INTERNAL_INCLUDE_DIR} )
 
   if (MSVC)
     add_custom_command(TARGET peerapi PRE_BUILD
