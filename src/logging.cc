@@ -480,8 +480,8 @@ void LogMultiline(LoggingSeverity level, const char* label, bool input,
       for (size_t i = 0; i < line_len; ++i) {
         unsigned char ch = udata[i];
         asc_line[i] = isprint(ch) ? ch : '.';
-        hex_line[i*2 + i/4] = hex_encode((unsigned char)(ch >> 4));
-        hex_line[i*2 + i/4 + 1] = hex_encode((unsigned char)(ch & 0xf));
+        hex_line[i*2 + i/4] = hex_encode(std::string(1,ch >> 4))[0];
+        hex_line[i*2 + i/4 + 1] = hex_encode(std::string(1,ch & 0xf))[0];
       }
       asc_line[sizeof(asc_line)-1] = 0;
       hex_line[sizeof(hex_line)-1] = 0;
