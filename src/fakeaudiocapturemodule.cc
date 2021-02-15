@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "webrtc/pc/test/fakeaudiocapturemodule.h"
+#include "pc/test/fake_audio_capture_module.h"
 
 #include "rtc_base/checks.h"
 #include "rtc_base/ref_count.h"
