@@ -447,6 +447,15 @@ void LogMessage::OutputToDebug(const std::string& str,
 //////////////////////////////////////////////////////////////////////
 // Logging Helpers
 //////////////////////////////////////////////////////////////////////
+template <class CTYPE>
+const CTYPE* strchrn(const CTYPE* str, size_t slen, CTYPE ch) {
+  for (size_t i = 0; i < slen && str[i]; ++i) {
+    if (str[i] == ch) {
+      return str + i;
+    }
+  }
+  return 0;
+}
 
 void LogMultiline(LoggingSeverity level, const char* label, bool input,
                   const void* data, size_t len, bool hex_mode,
