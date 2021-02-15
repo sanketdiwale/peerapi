@@ -29,6 +29,14 @@
 #include "common_types.h"
 #include "modules/audio_device/include/audio_device.h"
 
+#include "pc/test/fake_audio_capture_module.h"
+
+#include "rtc_base/checks.h"
+#include "rtc_base/location.h"
+#include "rtc_base/ref_counted_object.h"
+#include "rtc_base/thread.h"
+#include "rtc_base/time_utils.h"
+
 namespace rtc {
 class Thread;
 }  // namespace rtc

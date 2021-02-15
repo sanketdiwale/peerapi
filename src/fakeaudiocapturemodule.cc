@@ -8,13 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#include "pc/test/fake_audio_capture_module.h"
-
-#include "rtc_base/checks.h"
-#include "rtc_base/location.h"
-#include "rtc_base/ref_counted_object.h"
-#include "rtc_base/thread.h"
-#include "rtc_base/time_utils.h"
+#include "fakeaudiocapturemodule.h"
 
 // Audio sample value that is high enough that it doesn't occur naturally when
 // frames are being faked. E.g. NetEq will not generate this large sample value

@@ -16,6 +16,7 @@
 #include "api/jsep.h"
 #include "rtc_base/strings/json.h"
 #include "sdk/media_constraints.h"
+#include "pc/test/mock_peer_connection_observers.h"
 #include "common.h"
 
 namespace peerapi {

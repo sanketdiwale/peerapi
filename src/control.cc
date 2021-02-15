@@ -7,11 +7,6 @@
 #include "control.h"
 #include "peer.h"
 
-#include "rtc_base/location.h"
-#include "rtc_base/strings/json.h"
-#include "rtc_base/thread.h"
-#include "api/create_peerconnection_factory.h"
-
 #include "logging.h"
 
 #ifdef WEBRTC_POSIX
