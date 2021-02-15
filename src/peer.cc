@@ -124,10 +124,10 @@ void PeerControl::CreateOffer(const webrtc::MediaConstraints* constraints) {
 
   state_ = pConnecting;
   webrtc::PeerConnectionInterface::RTCOfferAnswerOptions options;
-  if (mandatory_receive_) {
-    options.offer_to_receive_audio = true;
-    options.offer_to_receive_video = true;
-  }
+  // if (mandatory_receive_) {
+  //   options.offer_to_receive_audio = true;
+  //   options.offer_to_receive_video = true;
+  // }
   peer_connection_->CreateOffer(this, options);
   LOG_F( INFO ) << "Done";
 }
@@ -135,9 +135,9 @@ void PeerControl::CreateOffer(const webrtc::MediaConstraints* constraints) {
 
 void PeerControl::CreateAnswer(const webrtc::MediaConstraints* constraints) {
   RTC_DCHECK( state_ == pClosed );
-
+  webrtc::PeerConnectionInterface::RTCOfferAnswerOptions options;
   state_ = pConnecting;
-  peer_connection_->CreateAnswer(this, constraints);
+  peer_connection_->CreateAnswer(this, options);
   LOG_F( INFO ) << "Done";
 }
 
