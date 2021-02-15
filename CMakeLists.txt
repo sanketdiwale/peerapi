@@ -22,7 +22,7 @@ set(CPACK_PACKAGE_VERSION "${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSIO
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "${PACKAGE} ${PACKAGE_VERSION}")
 
 option(PEERAPI_WITH_STATIC "Build the static version of the library" ON)
-option(PEERAPI_WITH_SHARED "Build the shared version of the library" ON)
+option(PEERAPI_WITH_SHARED "Build the shared version of the library" OFF)
 option(PEERAPI_BUILD_EXAMPLE "Build the example application" ON)
 option(PEERAPI_BUILD_TEST "Build test application" ON)
 
