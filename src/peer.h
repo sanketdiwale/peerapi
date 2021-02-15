@@ -15,6 +15,7 @@
 #include "api/scoped_refptr.h"
 #include "api/jsep.h"
 #include "rtc_base/strings/json.h"
+#include "sdk/media_constraints.h"
 #include "common.h"
 
 namespace peerapi {
