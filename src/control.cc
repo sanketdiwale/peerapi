@@ -5,7 +5,7 @@
 */
 
 #include "control.h"
-// #include "peer.h"
+#include "peer.h"
 
 // #include "logging.h"
 

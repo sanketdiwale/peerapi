@@ -4,12 +4,12 @@
 *  Ryan Lee
 */
 
-#include "control.h"
+
 #include "peer.h"
 // #include "api/test/fakeconstraints.h"
 
 
-#include "logging.h"
+
 
 namespace peerapi {
 

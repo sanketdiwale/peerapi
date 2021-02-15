@@ -18,7 +18,8 @@
 #include "sdk/media_constraints.h"
 #include "pc/test/mock_peer_connection_observers.h"
 #include "common.h"
-
+#include "logging.h"
+#include "control.h"
 namespace peerapi {
 
 //
