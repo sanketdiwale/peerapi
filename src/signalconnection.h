@@ -46,7 +46,6 @@
 
 #include "rtc_base/third_party/sigslot/sigslot.h"
 #include "rtc_base/strings/json.h"
-#include "logging.h"
 
 namespace peerapi {
 

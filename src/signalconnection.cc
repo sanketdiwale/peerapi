@@ -11,6 +11,7 @@
 #include <map>
 #include <list>
 #include "signalconnection.h"
+#include "logging.h"
 
 namespace peerapi {
 

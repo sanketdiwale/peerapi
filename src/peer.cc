@@ -6,6 +6,10 @@
 
 
 #include "peer.h"
+#include "logging.h"
+#include "control.h"
+#include "sdk/media_constraints.h"
+#include "pc/test/mock_peer_connection_observers.h"
 // #include "api/test/fakeconstraints.h"
 
 

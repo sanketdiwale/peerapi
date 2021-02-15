@@ -10,6 +10,12 @@
 
 #include "fakeaudiocapturemodule.h"
 
+#include "rtc_base/checks.h"
+#include "rtc_base/location.h"
+#include "rtc_base/ref_counted_object.h"
+#include "rtc_base/thread.h"
+#include "rtc_base/time_utils.h"
+
 // Audio sample value that is high enough that it doesn't occur naturally when
 // frames are being faked. E.g. NetEq will not generate this large sample value
 // unless it has received an audio frame containing a sample of this value.

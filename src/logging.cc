@@ -45,6 +45,11 @@ static const char kLibjingle[] = "libjingle";
 #include <ostream>
 #include <vector>
 
+#include "rtc_base/critical_section.h"
+#include "rtc_base/platform_thread.h"
+#include "rtc_base/string_encode.h"
+#include "rtc_base/string_utils.h"
+#include "rtc_base/time_utils.h"
 #include "logging.h"
 
 using namespace rtc;
