@@ -29,7 +29,7 @@
 #include "common_types.h"
 #include "modules/audio_device/include/audio_device.h"
 
-#include "pc/test/fake_audio_capture_module.h"
+// #include "pc/test/fake_audio_capture_module.h"
 
 #include "rtc_base/checks.h"
 #include "rtc_base/location.h"
