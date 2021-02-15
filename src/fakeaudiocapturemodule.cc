@@ -40,8 +40,7 @@ enum {
 };
 
 FakeAudioCaptureModule::FakeAudioCaptureModule()
-    : last_process_time_ms_(0),
-      audio_callback_(nullptr),
+    : audio_callback_(nullptr),
       recording_(false),
       playing_(false),
       play_is_initialized_(false),
@@ -50,7 +49,7 @@ FakeAudioCaptureModule::FakeAudioCaptureModule()
       started_(false),
       next_frame_time_(0),
       frames_received_(0) {
-}
+}// last_process_time_ms_(0),
 
 FakeAudioCaptureModule::~FakeAudioCaptureModule() {
   if (process_thread_) {
@@ -72,22 +71,22 @@ int FakeAudioCaptureModule::frames_received() const {
   return frames_received_;
 }
 
-int64_t FakeAudioCaptureModule::TimeUntilNextProcess() {
-  const int64_t current_time = rtc::TimeMillis();
-  if (current_time < last_process_time_ms_) {
-    // TODO: wraparound could be handled more gracefully.
-    return 0;
-  }
-  const int64_t elapsed_time = current_time - last_process_time_ms_;
-  if (kAdmMaxIdleTimeProcess < elapsed_time) {
-    return 0;
-  }
-  return kAdmMaxIdleTimeProcess - elapsed_time;
-}
+// int64_t FakeAudioCaptureModule::TimeUntilNextProcess() {
+//   const int64_t current_time = rtc::TimeMillis();
+//   if (current_time < last_process_time_ms_) {
+//     // TODO: wraparound could be handled more gracefully.
+//     return 0;
+//   }
+//   const int64_t elapsed_time = current_time - last_process_time_ms_;
+//   if (kAdmMaxIdleTimeProcess < elapsed_time) {
+//     return 0;
+//   }
+//   return kAdmMaxIdleTimeProcess - elapsed_time;
+// }
 
-void FakeAudioCaptureModule::Process() {
-  last_process_time_ms_ = rtc::TimeMillis();
-}
+// void FakeAudioCaptureModule::Process() {
+//   last_process_time_ms_ = rtc::TimeMillis();
+// }
 
 int32_t FakeAudioCaptureModule::ActiveAudioLayer(
     AudioLayer* /*audio_layer*/) const {
